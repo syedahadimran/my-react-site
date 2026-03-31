@@ -1,0 +1,188 @@
+.padel-experience {
+  background: #ffff;
+  padding: 120px 20px 140px;
+}
+
+.padel-experience__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.padel-experience__title {
+  font-family: "Akira Expanded", sans-serif;
+  margin: 0;
+  color: #08153d;
+  font-size: 48px;
+  line-height: 0.95;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.padel-experience__description {
+  max-width: 980px;
+  margin: 34px auto 0;
+  color: #4a5f82;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.padel-experience__grid {
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: center;
+  column-gap: 100px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.padel-experience__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.padel-experience__icon {
+  color: #0a2c88;
+  width: 74px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.padel-experience__icon svg {
+  width: 74px;
+  height: 74px;
+  display: block;
+}
+
+.padel-experience__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.padel-experience__icon-img {
+  width: 74px;
+  height: 74px;
+  display: block;
+  object-fit: contain;
+}
+
+.padel-experience__card-title {
+  margin: 28px 0 0;
+  color: #0a2c88;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+}
+
+@media (max-width: 768px) {
+  .padel-experience__icon-img {
+    width: 82px;
+    height: 82px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .padel-experience__title {
+    font-size: 48px;
+  }
+
+  .padel-experience__description {
+    font-size: 18px;
+    max-width: 860px;
+  }
+}
+
+@media (max-width: 768px) {
+  .padel-experience {
+    padding: 74px 20px 95px;
+  }
+
+  .padel-experience__container {
+    max-width: 760px;
+  }
+
+  .padel-experience__title {
+    font-size: 48px;
+    line-height: 1.03;
+    letter-spacing: 0.5px;
+  }
+
+  .padel-experience__description {
+    max-width: 100%;
+    margin-top: 42px;
+    font-size: 28px;
+    line-height: 1.55;
+  }
+
+  .padel-experience__grid {
+    margin-top: 78px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 64px;
+  }
+
+  .padel-experience__icon {
+    width: 82px;
+    height: 82px;
+  }
+
+  .padel-experience__icon svg {
+    width: 82px;
+    height: 82px;
+  }
+
+  .padel-experience__card-title {
+    margin-top: 28px;
+    font-size: 20px;
+    line-height: 1.65;
+    letter-spacing: 4.5px;
+  }
+}
+
+@media (max-width: 520px) {
+  .padel-experience {
+    padding: 64px 18px 84px;
+  }
+
+  .padel-experience__title {
+    font-size: 30px;
+    line-height: 1.06;
+  }
+
+  .padel-experience__description {
+    margin-top: 38px;
+    font-size: 16px;
+    line-height: 1.52;
+  }
+
+  .padel-experience__grid {
+    margin-top: 72px;
+    column-gap: 22px;
+    row-gap: 58px;
+  }
+
+  .padel-experience__icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .padel-experience__icon svg {
+    width: 76px;
+    height: 76px;
+  }
+
+  .padel-experience__card-title {
+    font-size: 12px;
+    line-height: 1.55;
+    letter-spacing: 4px;
+  }
+}
