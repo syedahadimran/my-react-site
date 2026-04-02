@@ -1,20 +1,22 @@
-import Hero from "./sections/slider/hero";
-import PadelExperience from "./sections/experienceSect/PadelExperience";
-import Footer from "./sections/Footer/Footer";
-import ContactForm from "./sections/ContactForm/ContactForm";
-import VenueSessions from "./sections/VenueSessions/VenueSessions";
-import CommunityHub from "./sections/CommunityHub/CommunityHub";
+import React, { Suspense, lazy } from "react";
+
+const Hero = lazy(() => import("./sections/slider/hero"));
+const PadelExperience = lazy(() => import("./sections/experienceSect/PadelExperience"));
+const VenueSessions = lazy(() => import("./sections/VenueSessions/VenueSessions"));
+const CommunityHub = lazy(() => import("./sections/CommunityHub/CommunityHub"));
+const ContactForm = lazy(() => import("./sections/ContactForm/ContactForm"));
+const Footer = lazy(() => import("./sections/Footer/Footer"));
 
 function App() {
   return (
-    <>
+    <Suspense fallback={<div style={{ height: "100vh" }} />}>
       <Hero />
-      <PadelExperience  />
+      <PadelExperience />
       <VenueSessions />
       <CommunityHub />
       <ContactForm />
       <Footer />
-    </>
+    </Suspense>
   );
 }
 
