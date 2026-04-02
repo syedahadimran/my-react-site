@@ -1,0 +1,686 @@
+.community-hub {
+  background: #01194f;
+  padding: 44px 20px 80px;
+}
+
+.community-hub__container {
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-hub__eyebrow {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.community-hub__title {
+  margin: 22px 0 0;
+  color: #ffffff;
+  font-size: 88px;
+  line-height: 0.92;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.community-hub__subtitle {
+  margin: 36px 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.community-hub__tabs {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.community-hub__tab {
+  min-width: 128px;
+  height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.13);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 28px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.community-hub__tab--active {
+  background: #ffd600;
+  color: #0a0a0a;
+  border-color: #ffd600;
+  box-shadow: 0 6px 18px rgba(255, 214, 0, 0.18);
+}
+
+.community-hub__cards {
+  margin-top: 86px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.community-hub__cards--animating {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.community-hub__card {
+  position: relative;
+  background: #0a1f57;
+  border: 1px solid rgba(255, 225, 0, 0.32);
+  border-radius: 24px;
+  overflow: hidden;
+  text-align: left;
+  transform: translateY(0);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+  box-shadow:
+    0 0 0 rgba(0, 0, 0, 0),
+    0 18px 40px rgba(0, 0, 0, 0);
+}
+
+.community-hub__card::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -18px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 225, 0, 0.22) 0%,
+    rgba(255, 225, 0, 0.08) 35%,
+    rgba(255, 225, 0, 0) 72%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: scale(0.92);
+}
+
+.community-hub__image-wrap {
+  position: relative;
+  height: 372px;
+  overflow: hidden;
+}
+
+.community-hub__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+  transform: scale(1);
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.community-hub__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.14) 36%,
+    rgba(2, 12, 44, 0.6) 100%
+  );
+  transition: background 0.35s ease;
+}
+
+.community-hub__badge {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: rgba(31, 35, 43, 0.95);
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.community-hub__content {
+  background: #0b1d53;
+  padding: 38px 42px 36px;
+  transition: background 0.35s ease;
+}
+
+.community-hub__card-title {
+  margin: 0;
+  color: #ffe100;
+  font-size: 43px;
+  line-height: 0.95;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  transition:
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.community-hub__description {
+  margin: 34px 0 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.community-hub__meta-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 26px;
+  row-gap: 22px;
+}
+
+.community-hub__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.community-hub__meta-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #ffe100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.community-hub__meta-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .community-hub__tab:hover {
+    transform: translateY(-1px);
+  }
+
+  .community-hub__card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 225, 0, 0.75);
+    box-shadow:
+      0 24px 55px rgba(0, 0, 0, 0.34),
+      0 0 0 1px rgba(255, 225, 0, 0.1);
+  }
+
+  .community-hub__card:hover::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .community-hub__card:hover .community-hub__image {
+    transform: scale(1.045);
+    filter: brightness(0.7);
+  }
+
+  .community-hub__card:hover .community-hub__image-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.08) 0%,
+      rgba(0, 0, 0, 0.12) 34%,
+      rgba(2, 12, 44, 0.56) 100%
+    );
+  }
+
+  .community-hub__card:hover .community-hub__content {
+    background: #0a1b4d;
+  }
+
+  .community-hub__card:hover .community-hub__card-title {
+    transform: translateY(-1px);
+    text-shadow: 0 0 12px rgba(255, 225, 0, 0.08);
+  }
+
+  .community-hub__card:hover .community-hub__description {
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .community-hub__card:hover .community-hub__meta-item {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .community-hub__card:hover .community-hub__meta-icon {
+    transform: scale(1.06);
+  }
+}
+
+.community-hub__card:focus-within {
+  transform: translateY(-8px);
+  border-color: rgba(255, 225, 0, 0.75);
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.34),
+    0 0 0 1px rgba(255, 225, 0, 0.1);
+}
+
+.community-hub__card:focus-within::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.community-hub__levels {
+  margin-top: 118px;
+}
+
+.community-hub__levels-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.community-hub__levels-eyebrow {
+  margin: 84px 0 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.community-hub__levels-title {
+  margin: 24px 0 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 76px;
+  line-height: 0.94;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.community-hub__levels-grid {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.community-hub__level-card {
+  border-radius: 24px;
+  padding: 44px 42px 40px;
+  text-align: center;
+}
+
+.community-hub__level-card--gold {
+  background: #c9a718;
+}
+
+.community-hub__level-card--silver {
+  background: #c6c6c6;
+}
+
+.community-hub__level-card--bronze {
+  background: #c57b2d;
+}
+
+.community-hub__level-name {
+  margin: 0;
+  color: #031545;
+  font-size: 56px;
+  line-height: 0.95;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.community-hub__level-rating {
+  margin: 34px 0 0;
+  color: rgba(3, 21, 69, 0.8);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.community-hub__level-subtitle {
+  margin: 12px 0 0;
+  color: rgba(3, 21, 69, 0.58);
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.community-hub__level-button {
+  margin-top: 44px;
+  width: 100%;
+  min-height: 72px;
+  border: none;
+  border-radius: 18px;
+  background: #021344;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.community-hub__level-button-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.community-hub__level-button-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .community-hub__level-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(1, 10, 35, 0.22);
+    background: #01103a;
+  }
+}
+
+@media (max-width: 1200px) {
+  .community-hub__title {
+    font-size: 72px;
+  }
+
+  .community-hub__cards {
+    gap: 22px;
+  }
+
+  .community-hub__image-wrap {
+    height: 330px;
+  }
+
+  .community-hub__card-title {
+    font-size: 36px;
+  }
+
+  .community-hub__description {
+    font-size: 20px;
+  }
+
+  .community-hub__meta-item {
+    font-size: 18px;
+  }
+
+  .community-hub__levels-title {
+    font-size: 64px;
+  }
+
+  .community-hub__level-name {
+    font-size: 46px;
+  }
+
+  .community-hub__level-button {
+    min-height: 66px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .community-hub {
+    padding: 56px 18px 72px;
+  }
+
+  .community-hub__title {
+    font-size: 54px;
+    line-height: 0.98;
+  }
+
+  .community-hub__subtitle {
+    font-size: 19px;
+    margin-top: 28px;
+  }
+
+  .community-hub__cards {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 68px auto 0;
+  }
+
+  .community-hub__image-wrap {
+    height: 330px;
+  }
+
+  .community-hub__levels {
+    margin-top: 94px;
+  }
+
+  .community-hub__levels-eyebrow {
+    margin-top: 64px;
+  }
+
+  .community-hub__levels-title {
+    font-size: 52px;
+    line-height: 0.98;
+  }
+
+  .community-hub__levels-grid {
+    margin-top: 52px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .community-hub__level-card {
+    padding: 40px 28px 34px;
+  }
+
+  .community-hub__level-name {
+    font-size: 42px;
+  }
+
+  .community-hub__level-rating {
+    margin-top: 26px;
+    font-size: 24px;
+  }
+
+  .community-hub__level-subtitle {
+    font-size: 18px;
+  }
+
+  .community-hub__level-button {
+    margin-top: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .community-hub {
+    padding: 54px 16px 64px;
+  }
+
+  .community-hub__eyebrow {
+    font-size: 14px;
+    letter-spacing: 1.8px;
+  }
+
+  .community-hub__title {
+    margin-top: 18px;
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  .community-hub__subtitle {
+    margin-top: 22px;
+    font-size: 18px;
+    line-height: 1.55;
+    padding: 0 6px;
+  }
+
+  .community-hub__tabs {
+    margin-top: 34px;
+    gap: 12px;
+  }
+
+  .community-hub__tab {
+    min-width: 118px;
+    height: 52px;
+    font-size: 17px;
+    padding: 0 22px;
+  }
+
+  .community-hub__cards {
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .community-hub__card {
+    border-radius: 20px;
+  }
+
+  .community-hub__image-wrap {
+    height: 250px;
+  }
+
+  .community-hub__badge {
+    top: 16px;
+    left: 16px;
+    min-height: 38px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  .community-hub__content {
+    padding: 24px 20px 24px;
+  }
+
+  .community-hub__card-title {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .community-hub__description {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .community-hub__meta-grid {
+    margin-top: 22px;
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+
+  .community-hub__meta-item {
+    font-size: 15px;
+  }
+
+  .community-hub__meta-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .community-hub__levels {
+    margin-top: 86px;
+  }
+
+  .community-hub__levels-eyebrow {
+    margin-top: 58px;
+    font-size: 14px;
+    letter-spacing: 1.8px;
+  }
+
+  .community-hub__levels-title {
+    margin-top: 20px;
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .community-hub__levels-grid {
+    margin-top: 42px;
+    gap: 20px;
+  }
+
+  .community-hub__level-card {
+    border-radius: 22px;
+    padding: 38px 18px 20px;
+  }
+
+  .community-hub__level-name {
+    font-size: 42px;
+    line-height: 0.95;
+  }
+
+  .community-hub__level-rating {
+    margin-top: 28px;
+    font-size: 24px;
+  }
+
+  .community-hub__level-subtitle {
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .community-hub__level-button {
+    margin-top: 42px;
+    min-height: 96px;
+    border-radius: 22px;
+    font-size: 18px;
+    gap: 12px;
+  }
+
+  .community-hub__level-button-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
