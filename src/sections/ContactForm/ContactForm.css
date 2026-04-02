@@ -13,7 +13,7 @@
   font-family: "Akira Expanded", sans-serif;
   margin: 0;
   color: #08153d;
-  font-size: 64px;
+  font-size: 36px;
   line-height: 0.95;
   font-weight: 900;
   letter-spacing: 1px;
@@ -23,7 +23,7 @@
 .contact-form-section__subtitle {
   margin: 34px 0 0;
   color: #516684;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.45;
   font-weight: 400;
 }
@@ -110,13 +110,13 @@
   }
 
   .contact-form-section__title {
-    font-size: 42px;
+    font-size: 30px;
     line-height: 1;
   }
 
   .contact-form-section__subtitle {
     margin-top: 24px;
-    font-size: 19px;
+    font-size: 16px;
     line-height: 1.5;
   }
 
@@ -158,11 +158,11 @@
   }
 
   .contact-form-section__title {
-    font-size: 34px;
+    font-size: 24px;
   }
 
   .contact-form-section__subtitle {
-    font-size: 17px;
+    font-size: 14px;
   }
 
   .contact-form {

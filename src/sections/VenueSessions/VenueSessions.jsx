@@ -95,7 +95,7 @@ const VenueSessions = () => {
   return (
     <section className="venue-sessions">
       <div className="venue-sessions__container">
-        <span className="venue-sessions__eyebrow">COURT SESSIONS</span>
+        <h2 className="venue-sessions__eyebrow">COURT SESSIONS</h2>
 
         <h2 className="venue-sessions__title">EXPERIENCE OUR VENUE</h2>
 
