@@ -70,6 +70,7 @@ export const levelCards = [
     rating: "3.5+",
     subtitle: "Advanced players",
     theme: "gold",
+    whatsappLink: "https://chat.whatsapp.com/KNTFrl74E60K9266GVX0cU?mode=gi_t"
   },
   {
     id: 2,
@@ -77,6 +78,7 @@ export const levelCards = [
     rating: "2.0 - 3.5",
     subtitle: "Intermediate players",
     theme: "silver",
+    whatsappLink: "https://chat.whatsapp.com/CwjmrKDv2j1Fo4SyaBxQIy?mode=gi_t"
   },
   {
     id: 3,
@@ -84,5 +86,6 @@ export const levelCards = [
     rating: "0.5 - 2.0",
     subtitle: "Beginner players",
     theme: "bronze",
+    whatsappLink: "https://chat.whatsapp.com/EKY0OqX6iZ0HZC3rPyCvOp?mode=gi_t"
   },
 ];

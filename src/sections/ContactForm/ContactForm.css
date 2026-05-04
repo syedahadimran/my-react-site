@@ -100,6 +100,31 @@
   opacity: 0.98;
 }
 
+.contact-form-section {
+  position: relative;
+  background-image: url("../../assets/images/get-in-bg.jpeg"); /* same style as hero */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* overlay like hero */
+.contact-form-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust opacity as needed */
+  z-index: 1;
+}
+
+/* make sure content stays above overlay */
+.contact-form-section__container {
+  position: relative;
+  z-index: 2;
+}
+
+
+
 @media (max-width: 768px) {
   .contact-form-section {
     padding: 72px 20px 72px;
@@ -150,6 +175,21 @@
   .contact-form__arrow {
     font-size: 22px;
   }
+
+  .contact-form-section {
+    background-position: center top; /* keeps important part visible */
+    background-size: cover;
+  }
+
+  .contact-form-section::before {
+    background: rgba(0, 0, 0, 0.6); /* slightly darker for readability */
+  }
+}
+
+/* Optional: fix height issues on mobile browsers */
+.contact-form-section {
+  min-height: 100vh;
+
 }
 
 @media (max-width: 480px) {
@@ -186,4 +226,27 @@
     height: 56px;
     font-size: 15px;
   }
+}
+
+
+/* make title + subtitle white */
+.contact-form-section__title,
+.contact-form-section__subtitle {
+  color: #ffffff;
+}
+
+/* form text + input text */
+.contact-form__input {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+/* placeholder text */
+.contact-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* focus state */
+.contact-form__input:focus {
+  border-bottom-color: #ffffff;
 }

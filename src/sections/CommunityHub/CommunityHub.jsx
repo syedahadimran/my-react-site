@@ -252,12 +252,16 @@ const CommunityHub = () => {
 
                 <p className="community-hub__level-subtitle">{level.subtitle}</p>
 
-                <button type="button" className="community-hub__level-button">
+                <a href={level.whatsappLink}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="community-hub__level-button"
+>
                   <span className="community-hub__level-button-icon">
                     <WhatsAppIcon />
                   </span>
                   <span>JOIN WHATSAPP</span>
-                </button>
+                </a>
               </article>
             ))}
           </div>

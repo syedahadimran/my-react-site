@@ -110,14 +110,17 @@
 
 .hero__title {
    margin: 0;
-  max-width: 900px;
+  max-width: 100%;
   font-family: "Akira Expanded", sans-serif;
-  font-size: 72px;            
-  line-height: 1.2;
+  font-size: clamp(32px, 5.6vw, 72px);
+  line-height: 1.1;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: -0.04em;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
 
-  letter-spacing: 0.001em;
 }
 
 .hero__text {
@@ -188,6 +191,7 @@
   .hero__text {
     max-width: 700px;
   }
+
 }
 
 /* Mobile */
@@ -222,9 +226,10 @@
   }
 
   .hero__title {
-    max-width: 340px;
-    font-size: 36px;
-    line-height: 0.95;
+    max-width: 100%;
+    font-size: clamp(24px, 9vw, 40px);
+    letter-spacing: -0.06em;
+    line-height: 1.05;
   }
 
   .hero__text {
