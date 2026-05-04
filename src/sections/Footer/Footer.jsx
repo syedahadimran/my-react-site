@@ -14,9 +14,9 @@ const Footer = () => {
             </div>
 
             <p className="footer__description">
-              Padelhaus — riverside and indoor
+              Picklehaus — riverside and indoor
               <br />
-              padel experiences with premium
+              pickleball experiences with premium
               <br />
               courts, events, and community.
             </p>
@@ -69,7 +69,7 @@ const Footer = () => {
             <h3 className="footer__heading">Contact</h3>
 
             <div className="footer__contact-text">
-              Padelhaus Berlin
+              Picklehaus Berlin
               <br />
               Spree Riverside Courts
               <br />
@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
 
             <a href="mailto:operations@padelfc.net" className="footer__link footer__link--spaced">
-              operations@padelfc.net
+              operations@pickleballfc.net
             </a>
 
             <a href="/" className="footer__link footer__link--social">
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <p className="footer__bottom-text">© 2026 Padelhaus. All rights reserved.</p>
+          <p className="footer__bottom-text">© 2026 Picklehaus. All rights reserved.</p>
           <p className="footer__bottom-text footer__bottom-text--right">
             Built for players, partners, and community.
           </p>

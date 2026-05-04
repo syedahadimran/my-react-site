@@ -200,6 +200,15 @@
 
 /* Mobile */
 @media (max-width: 767px) {
+  .hero__video {
+    padding: 72px 20px 72px;
+    background-image: url("../../assets/images/get-in-mob-bg.jpeg"); /* same style as hero */
+  background-size: contain;
+  background-position: contain;
+  background-repeat: no-repeat;
+  
+}
+
    .hero__header {
     justify-content: space-between;
     gap: 0;
