@@ -106,6 +106,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 
 /* overlay like hero */
@@ -128,6 +129,10 @@
 @media (max-width: 768px) {
   .contact-form-section {
     padding: 72px 20px 72px;
+    background-image: url("../../assets/images/get-in-mob-bg.jpeg"); /* same style as hero */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   }
 
   .contact-form-section__container {

@@ -147,92 +147,7 @@ const CommunityHub = () => {
 
   return (
     <section className="community-hub">
-      <div className="community-hub__container">
-        <p className="community-hub__eyebrow">WHAT&apos;S HAPPENING</p>
-
-        <h2 className="community-hub__title">THE COMMUNITY HUB</h2>
-
-        <p className="community-hub__subtitle">
-          Join our community events, tournaments, and training sessions
-        </p>
-
-        <div className="community-hub__tabs">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              type="button"
-              className={`community-hub__tab ${
-                activeTab === tab.id ? "community-hub__tab--active" : ""
-              }`}
-              onClick={() => {
-                if (tab.id !== activeTab) {
-                  setActiveTab(tab.id);
-                }
-              }}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
-        <div
-          className={`community-hub__cards ${
-            isAnimating ? "community-hub__cards--animating" : ""
-          }`}
-        >
-          {displayedCards.map((card) => (
-            <article className="community-hub__card" key={`${activeTab}-${card.id}`}>
-              <div className="community-hub__image-wrap">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="community-hub__image"
-                />
-                <div className="community-hub__image-overlay" />
-                <span className="community-hub__badge">{card.badge}</span>
-              </div>
-
-              <div className="community-hub__content">
-                <h3 className="community-hub__card-title">{card.title}</h3>
-
-                <p className="community-hub__description">
-                  {card.description}
-                </p>
-
-                <div className="community-hub__meta-grid">
-                  <div className="community-hub__meta-item">
-                    <span className="community-hub__meta-icon">
-                      <CalendarIcon />
-                    </span>
-                    <span>{card.date}</span>
-                  </div>
-
-                  <div className="community-hub__meta-item">
-                    <span className="community-hub__meta-icon">
-                      <ClockIcon />
-                    </span>
-                    <span>{card.time}</span>
-                  </div>
-
-                  <div className="community-hub__meta-item">
-                    <span className="community-hub__meta-icon">
-                      <LocationIcon />
-                    </span>
-                    <span>{card.location}</span>
-                  </div>
-
-                  <div className="community-hub__meta-item">
-                    <span className="community-hub__meta-icon">
-                      <PlayersIcon />
-                    </span>
-                    <span>{card.players}</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-
+      
         <div className="community-hub__levels">
           <div className="community-hub__levels-divider" />
 
@@ -266,7 +181,6 @@ const CommunityHub = () => {
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 };
