@@ -7,13 +7,13 @@ const PadelExperience = () => {
     <section className="padel-experience">
       <div className="padel-experience__container">
         <h2 className="padel-experience__title">
-          A UNIQUE PADEL
+          A UNIQUE PICKLEBALL
           <br />
           EXPERIENCE
         </h2>
 
         <p className="padel-experience__description">
-          More than just a padel club. Play on our world-class courts, step onto
+          More than just a pickleball club. Play on our world-class courts, step onto
           our beach ,<br /> by the Spree, try pickleball — with more sports coming soon.
         </p>
 
