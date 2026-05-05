@@ -1,5 +1,5 @@
 .footer {
-  background: #0a1939;
+  background: #fedd00;
   color: #f5f3ee;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
@@ -28,7 +28,6 @@
   width: 140px;
   height: auto;
   display: block;
-  filter: brightness(0) invert(1);
 }
 
 .footer__logo svg {
@@ -42,7 +41,7 @@
   font-size: 14px;
   line-height: 1.48;
   font-weight: 400;
-  color: #f0eee9;
+  color: #000000;
 }
 
 .footer__column {
@@ -54,7 +53,7 @@
   font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
-  color: #ffffff;
+  color: #000000;
 }
 
 .footer__group--legal {
@@ -67,7 +66,7 @@
   font-size: 14px;
   line-height: 1.7;
   font-weight: 400;
-  color: #f3f1eb;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -92,8 +91,8 @@
   height: 24px;
   padding: 0 12px;
   border-radius: 999px;
-  background: #f4efe4;
-  color: #101010;
+  background: #000000;
+  color: #ffff;
   font-size: 12px;
   line-height: 1;
   font-weight: 500;
@@ -123,7 +122,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
-  color: rgba(243, 241, 235, 0.78);
+  color: #000000;
 }
 
 .footer__bottom-text--right {
@@ -309,7 +308,6 @@
     width: 140px;
   height: auto;
   display: block;
-  filter: brightness(0) invert(1);
   }
 
   .footer__description {

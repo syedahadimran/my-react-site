@@ -128,7 +128,7 @@ const VenueSessions = () => {
                     ))}
                   </h3> */}
 
-                  <div className="venue-sessions__underline" />
+                 {/* <div className="venue-sessions__underline" /> */}
                 </div>
 
                 <div className="venue-sessions__hover-border" />

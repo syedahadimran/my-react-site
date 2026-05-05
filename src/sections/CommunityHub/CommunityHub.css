@@ -1,5 +1,5 @@
 .community-hub {
-  background: #0a1939;
+  background: #fedd00;
   padding: 44px 20px 80px;
 }
 
@@ -11,7 +11,7 @@
 
 .community-hub__eyebrow {
   margin: 0;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(0, 0, 0, 0.62);
   font-size: 18px;
   line-height: 1;
   font-weight: 500;
@@ -22,7 +22,7 @@
 .community-hub__title {
   font-family: "Akira Expanded", sans-serif;
   margin: 22px 0 0;
-  color: #ffffff;
+  color: #000000;
   font-size: 48px;
   line-height: 0.92;
   font-weight: 900;
@@ -187,7 +187,7 @@
 .community-hub__card-title {
   font-family: "Akira Expanded", sans-serif;
   margin: 0;
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   line-height: 0.95;
   font-weight: 900;
@@ -317,13 +317,13 @@
 .community-hub__levels-divider {
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .community-hub__levels-eyebrow {
   margin: 84px 0 0;
   text-align: center;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(0, 0, 0, 0.62);
   font-size: 14px;
   line-height: 1;
   font-weight: 500;
@@ -335,7 +335,7 @@
   font-family: "Akira Expanded", sans-serif;
   margin: 24px 0 0;
   text-align: center;
-  color: #ffffff;
+  color: #000000;
   font-size: 36px;
   line-height: 0.94;
   font-weight: 900;
@@ -371,7 +371,7 @@
 .community-hub__level-name {
   font-family: "Akira Expanded", sans-serif;
   margin: 0;
-  color: #0a1939;
+  color: #000000;
   font-size: 30px;
   line-height: 0.95;
   font-weight: 900;
@@ -381,7 +381,7 @@
 
 .community-hub__level-rating {
   margin: 34px 0 0;
-  color: rgba(3, 21, 69, 0.8);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
@@ -389,7 +389,7 @@
 
 .community-hub__level-subtitle {
   margin: 12px 0 0;
-  color: rgba(3, 21, 69, 0.58);
+  color: rgba(0, 0, 0, 0.58);
   font-size: 14px;
   line-height: 1.35;
   font-weight: 400;
@@ -401,7 +401,7 @@
   min-height: 50px;
   border: none;
   border-radius: 18px;
-  background: #0a1939;
+  background: #000000;
   color: #ffffff;
   text-decoration: none;
   display: inline-flex;
