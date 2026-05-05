@@ -117,7 +117,7 @@ const VenueSessions = () => {
                 <div className="venue-sessions__overlay" />
 
                 <div className="venue-sessions__content">
-                  <p className="venue-sessions__tag">{item.tag}</p>
+                 {/* <p className="venue-sessions__tag">{item.tag}</p>
 
                   <h3 className="venue-sessions__title-card">
                     {item.title.split("\n").map((line, index, arr) => (
@@ -126,7 +126,7 @@ const VenueSessions = () => {
                         {index < arr.length - 1 && <br />}
                       </React.Fragment>
                     ))}
-                  </h3>
+                  </h3> */}
 
                   <div className="venue-sessions__underline" />
                 </div>
