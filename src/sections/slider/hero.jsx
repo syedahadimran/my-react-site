@@ -1,19 +1,31 @@
 import "./hero.css";
-import heroVideo from "../../assets/images/slider-bg.jpeg";
+import heroDesktop from "../../assets/images/slider-bg.jpeg";
+import heroMobile from "../../assets/images/slider-bg-mob.jpeg";
 import logo from "../../assets/images/logo-white.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section className="hero">
       <div
         className="hero__video"
         style={{
-          backgroundImage: `url(${heroVideo})`,
+          backgroundImage: `url(${isMobile ? heroMobile : heroDesktop})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: isMobile ? "center top" : "center",
+          backgroundRepeat: "no-repeat",
         }}
       ></div>
 
@@ -27,8 +39,7 @@ function Hero() {
           <a href="#contact" className="hero__nav-link">Contact</a>
         </div>
 
-        
-        <nav className={`hero__nav hero__nav--left ${menuOpen ? "active" : ""}`}>
+        <nav className="hero__nav hero__nav--left">
           <a href="#contact" className="hero__nav-link">Contact</a>
         </nav>
 
@@ -36,7 +47,7 @@ function Hero() {
           <img src={logo} alt="Logo" className="hero__logo" />
         </a>
 
-        <nav className={`hero__nav hero__nav--right ${menuOpen ? "active" : ""}`}>
+        <nav className="hero__nav hero__nav--right">
           <a href="#about" className="hero__nav-link">About Us</a>
         </nav>
 
