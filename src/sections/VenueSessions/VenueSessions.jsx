@@ -126,7 +126,7 @@ const VenueSessions = () => {
                 <div className="venue-sessions__overlay" />
 
                 <div className="venue-sessions__content">
-                  <p className="venue-sessions__tag">{item.tag}</p>
+                 {/* <p className="venue-sessions__tag">{item.tag}</p>
 
                   <h3 className="venue-sessions__title-card">
                     {item.title.split("\n").map((line, index, arr) => (
@@ -137,7 +137,7 @@ const VenueSessions = () => {
                     ))}
                   </h3>
 
-                  <div className="venue-sessions__underline" />
+                  <div className="venue-sessions__underline" /> */}
                 </div>
 
                 <div className="venue-sessions__hover-border" />

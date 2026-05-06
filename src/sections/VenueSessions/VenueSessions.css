@@ -93,12 +93,6 @@
 .venue-sessions__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.82) 8%,
-    rgba(0,0,0,0.18) 55%,
-    rgba(0,0,0,0.05) 100%
-  );
 }
 
 .venue-sessions__content {
