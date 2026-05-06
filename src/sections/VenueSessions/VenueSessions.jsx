@@ -4,7 +4,10 @@ import { venueSessions } from "./data";
 
 const VenueSessions = () => {
   const sliderRef = useRef(null);
+
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(true);
 
   const scrollAmount = () => {
     const slider = sliderRef.current;
@@ -80,9 +83,15 @@ const VenueSessions = () => {
       });
 
       setActiveIndex(closest);
+
+      const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+      setShowLeft(slider.scrollLeft > 10);
+      setShowRight(slider.scrollLeft < maxScrollLeft - 10);
     };
 
     handleScroll();
+
     slider.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll);
 
@@ -117,7 +126,7 @@ const VenueSessions = () => {
                 <div className="venue-sessions__overlay" />
 
                 <div className="venue-sessions__content">
-                 {/* <p className="venue-sessions__tag">{item.tag}</p>
+                  <p className="venue-sessions__tag">{item.tag}</p>
 
                   <h3 className="venue-sessions__title-card">
                     {item.title.split("\n").map((line, index, arr) => (
@@ -126,9 +135,9 @@ const VenueSessions = () => {
                         {index < arr.length - 1 && <br />}
                       </React.Fragment>
                     ))}
-                  </h3> */}
+                  </h3>
 
-                 {/* <div className="venue-sessions__underline" /> */}
+                  <div className="venue-sessions__underline" />
                 </div>
 
                 <div className="venue-sessions__hover-border" />
@@ -136,23 +145,27 @@ const VenueSessions = () => {
             ))}
           </div>
 
-          <button
-            className="venue-sessions__arrow venue-sessions__arrow--left"
-            onClick={scrollPrev}
-            aria-label="Previous session"
-            type="button"
-          >
-            <span>‹</span>
-          </button>
+          {showLeft && (
+            <button
+              className="venue-sessions__arrow venue-sessions__arrow--left"
+              onClick={scrollPrev}
+              aria-label="Previous session"
+              type="button"
+            >
+              <span>‹</span>
+            </button>
+          )}
 
-          <button
-            className="venue-sessions__arrow venue-sessions__arrow--right"
-            onClick={scrollNext}
-            aria-label="Next session"
-            type="button"
-          >
-            <span>›</span>
-          </button>
+          {showRight && (
+            <button
+              className="venue-sessions__arrow venue-sessions__arrow--right"
+              onClick={scrollNext}
+              aria-label="Next session"
+              type="button"
+            >
+              <span>›</span>
+            </button>
+          )}
         </div>
 
         <div className="venue-sessions__mobile-nav">
