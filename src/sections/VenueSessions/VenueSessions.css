@@ -236,8 +236,8 @@
 
   .venue-sessions__card {
      width: calc(100vw - 85px);
-    height: 560px;
-    border-radius: 16px;
+    height: 660px;
+    border-radius: 9px;
   }
 
   .venue-sessions__content {
